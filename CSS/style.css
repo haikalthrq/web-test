@@ -1,0 +1,461 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  font-family: "Poppin Sans", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+}
+
+li,
+a,
+button {
+  font-weight: 500;
+  font-size: 16px;
+  color: #edf0f1;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 15px 10%;
+  background-color: #100645;
+  background-blend-mode: normal;
+}
+
+main {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.home {
+  height: 100vh;
+  background-image: url("../assets/switzerland.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: darken;
+  position: relative;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.home::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.top {
+  align-items: center;
+  color: #ffffff;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+  margin: auto;
+  font-size: 42px;
+}
+
+.subtop {
+  font-weight: 100;
+  align-items: center;
+  color: #ffffff;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+  margin: auto;
+  font-style: italic;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.left {
+  display: flex;
+  margin-top: 30px;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.caption {
+  color: white;
+  font-style: italic;
+  text-align: start;
+  margin-top: 8px;
+}
+
+.profile {
+  display: flex;
+  max-width: 61%;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 8px;
+}
+
+.profile img {
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-info h1 {
+  margin: 0;
+  font-size: 12px;
+}
+
+.profession {
+  margin: 0;
+  font-size: 10px;
+  font-style: italic;
+}
+
+.right {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(1px);
+  color: white;
+  padding: 20px;
+  border-radius: 10%;
+}
+
+.right form {
+  padding: 0 30px;
+}
+
+.promo {
+  display: flex;
+  flex-direction: column;
+  margin-left: 90px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  align-items: baseline;
+  max-width: 61%;
+  padding: 25px;
+  font-style: normal;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(1px);
+  color: white;
+  border-radius: 30px;
+}
+
+.pr-title {
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.pr-main {
+  font-size: 13px;
+}
+
+.form-capt {
+  align-items: center;
+  text-align: center;
+  padding: 10px 0;
+  display: inline-block;
+}
+
+h4.form-capt {
+  text-align: center;
+  display: inline-block;
+}
+
+form .txt {
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin: 30px 0;
+}
+
+.txt input {
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+  color: white;
+}
+
+.txt datalist {
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.txt label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #ffffff;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.txt span::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #2691d9;
+  transition: 0.5s;
+}
+.txt input:focus ~ label,
+.txt input:valid ~ label {
+  top: -5px;
+  color: #2691d9;
+}
+.txt input:focus ~ span::before,
+.txt input:valid ~ span::before {
+  width: 100%;
+}
+
+input.country {
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+input[type="submit"] {
+  width: 100%;
+  height: 50px;
+  border: 0px;
+  background-color: #100645;
+  border-radius: 25px;
+  font-size: 18px;
+  color: #e9f4fb;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+}
+input[type="submit"]:hover {
+  border-color: #2691d9;
+  transition: 0.5s;
+}
+
+.logo {
+  cursor: pointer;
+  margin-right: auto;
+}
+
+.nav_links {
+  list-style: none;
+}
+
+.nav_links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav_links li a {
+  transition: all 0.3s ease;
+}
+
+.nav_links li a:hover {
+  color: yellow;
+}
+
+.image {
+  width: 50%;
+  max-width: 480px;
+}
+
+.image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .image,
+  .form {
+    width: 100%;
+    max-width: none;
+  }
+
+  .image {
+    order: 2;
+    margin-top: 1em;
+  }
+}
+
+.name,
+.email,
+.country {
+  color: #252525;
+}
+
+.promo {
+  max-width: 50%;
+  text-align: justify;
+  font-style: oblique;
+  font-size: 12px;
+  font-weight: 100;
+}
+
+button {
+  margin-left: 20px;
+  padding: 9px 25px;
+  background-color: rgba(0, 136, 169, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s case 0s;
+}
+
+button:hover {
+  background-color: rgba(0, 136, 169, 0.8);
+}
+
+.our-package {
+  display: flex;
+  background-image: url("../assets/201217.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: darken;
+  position: relative;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  z-index: -999;
+}
+
+.our-package::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.package {
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+  align-items: center;
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+  font-size: 42px;
+}
+
+.cluster1, .cluster2 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 20px auto;
+  max-width: 1200px;
+  width: 100%;
+  height: 90vh;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+}
+
+.aus, .fra, .ice, .ita, .nor, .swi {
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.package h1, .aus h1, .fra h1, .ice h1, .ita h1, .nor h1, .swi h1 {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.stars {
+  width: 50px;
+  height: 50px
+}
+
+.call-us {
+  display: flex;
+  background-image: url("../assets/3Cologne-Cathedral-Hohenzollern-bridge-Germany-Cologne-Europe-night-4K.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: darken;
+  position: relative;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.call-us::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.call {
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+  margin-top: 200px;
+  align-items: center;
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+  font-size: 36px;
+}
+
+.button {
+  background-color: #100645;
+  color: white;
+  position: relative;
+  z-index: 1;
+  font-size: 2em;
+  border-radius: 0.5em;
+  display: block;
+  margin: 0;
+  transform: scale(0.5);
+}
+
+.button:hover {
+  background-color: #0c0342;
+  cursor: pointer;
+}
+
+.button:active {
+  background-color: #0a022f;
+}
